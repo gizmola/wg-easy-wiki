@@ -67,6 +67,6 @@ $ nginx -s reload
 $ exit
 ```
 
-Of course, make sure to point `wg-easy.myhomelab.com` to your server's IP address with a DNS A record or DynamicDNS or any other method.
+Of course, make sure to point `wg-easy.myhomelab.com` to your server's IP address with a DNS A record or DynamicDNS or any other method. Ensure ports `80`, `443`, `51820` are available (e.g. by forwarding them in your router).
 
 That's it!
