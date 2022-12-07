@@ -32,12 +32,13 @@ services:
     image: weejewel/nginx-with-certbot
     container_name: nginx
     hostname: nginx
-    ports:
-      - "80:80/tcp"
-      - "443:443/tcp"
     volumes:
       - ~/.nginx/servers/:/etc/nginx/servers/
       - ./.nginx/letsencrypt/:/etc/letsencrypt/
+    ports:
+      - "80:80/tcp"
+      - "443:443/tcp"
+    restart: unless-stopped
 ```
 
 ## `~/.nginx/servers/wg-easy.conf`:
