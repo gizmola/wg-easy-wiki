@@ -2,7 +2,7 @@ In order for WireGuard Easy to run in a container, it needs NET_RAW to be enable
 
 # Run with Podman
 Add `--cap-add=NET_RAW` to the `podman run` command like so:
-```
+```sh
 podman run -d \
   --name=wg-easy \
   -e WG_HOST=🚨YOUR_SERVER_IP \
@@ -22,7 +22,7 @@ podman run -d \
 # Run with podman-compose
 Add `NET_RAW` to `the cap_add` list.
 
-```
+```yaml
 version: "3.8"
 services:
   wg-easy:
