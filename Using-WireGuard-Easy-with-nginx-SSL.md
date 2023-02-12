@@ -45,7 +45,7 @@ services:
 
 ```
 server {
-    server_name `⚠️wg-easy.myhomelab.com`;
+    server_name wg-easy.myhomelab.com;
 
     location / {
         proxy_pass http://wg-easy:51821/;
@@ -63,7 +63,10 @@ Then run once:
 
 ```bash
 $ docker exec -it nginx /bin/sh
-$ certbot --nginx --non-interactive --agree-tos -m webmaster@google.com -d `⚠️wg-easy.myhomelab.com`
+
+cp wg-easy.conf /etc/nginx/conf.d/.
+
+$ certbot --nginx --non-interactive --agree-tos -m webmaster@google.com -d ⚠️wg-easy.myhomelab.com
 $ nginx -s reload
 $ exit
 ```
