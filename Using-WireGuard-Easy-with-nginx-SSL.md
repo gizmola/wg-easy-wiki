@@ -45,7 +45,7 @@ services:
 
 ```
 server {
-    server_name wg-easy.myhomelab.com;
+    server_name ⚠️wg-easy.myhomelab.com;
 
     location / {
         proxy_pass http://wg-easy:51821/;
