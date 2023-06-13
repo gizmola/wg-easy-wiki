@@ -60,3 +60,23 @@ services:
       - net.ipv4.conf.all.src_valid_mark=1
 
 ```
+
+# Troubleshooting
+
+If the container isn't working as expected, try attaching it to watch its output (see `--attach` [here](https://docs.podman.io/en/latest/markdown/podman-start.1.html))
+
+## Loading kernel modules
+
+Try loading these kernel modules on the host machine, if they haven't already. e.g. `sudo modprobe iptable_filter`
+```
+ip_tables
+iptable_filter
+iptable_nat
+wireguard
+xt_MASQUERADE
+```
+See [this issue](https://github.com/containers/podman/issues/15120#issuecomment-1397571841) for more info.
+
+## Set podman network MTU
+
+Especially in rootless containers, if WireGuard Easy claims to be connected to a client but nothing loads over the network, you may need to adjust the MTU (maximum transmission unit) for your podman network. For example, running `podman network create --opt mtu=1500` would create a network with an MTU of 1500. Then, recreate your podman container to use that network. See [here](https://github.com/containers/podman/issues/15120#issuecomment-1369386865) for additional context on this issue and [here](https://docs.podman.io/en/latest/markdown/podman-network.1.html) for documentation on managing networks with podman.
