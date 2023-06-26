@@ -63,9 +63,7 @@ Then run once:
 
 ```bash
 $ docker exec -it nginx /bin/sh
-
-cp wg-easy.conf /etc/nginx/conf.d/.
-
+$ cp /etc/nginx/servers/wg-easy.conf /etc/nginx/conf.d/.
 $ certbot --nginx --non-interactive --agree-tos -m webmaster@google.com -d ⚠️wg-easy.myhomelab.com
 $ nginx -s reload
 $ exit
