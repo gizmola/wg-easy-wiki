@@ -20,6 +20,7 @@ services:
       - ~/.wg-easy:/etc/wireguard
     ports:
       - "51820:51820/udp"
+      - "51821:51821/tcp"
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
