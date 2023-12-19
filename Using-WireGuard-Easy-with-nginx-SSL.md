@@ -13,7 +13,7 @@ services:
 
       # ⚠️ Change the Web UI Password:
       - PASSWORD=foobar123
-    image: weejewel/wg-easy
+    image: ghcr.io/wg-easy/wg-easy
     container_name: wg-easy
     hostname: wg-easy
     volumes:
