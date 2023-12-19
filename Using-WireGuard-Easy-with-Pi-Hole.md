@@ -19,7 +19,7 @@ services:
       # 💡 This is the Pi-Hole Container's IP Address
       - WG_DEFAULT_DNS=10.8.1.3
       - WG_DEFAULT_ADDRESS=10.8.0.x
-    image: weejewel/wg-easy
+    image: ghcr.io/wg-easy/wg-easy
     container_name: wg-easy
     volumes:
       - ~/.wg-easy:/etc/wireguard
