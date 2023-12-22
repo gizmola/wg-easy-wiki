@@ -75,7 +75,7 @@ services:
       - "--entrypoints.web.address=:80"
       - "--entrypoints.websecure.address=:443"
       - "--certificatesresolvers.MainCertResolver.acme.tlschallenge=true"
-      # ⚠️ Change the email to yours (to receive notifications from lesencrypt)
+      # ⚠️ Change the email to yours (to receive notifications from letsencrypt)
       - "--certificatesresolvers.MainCertResolver.acme.email=email@myhomelab.com"
       - "--certificatesresolvers.MainCertResolver.acme.storage=/letsencrypt/acme.json"
 
