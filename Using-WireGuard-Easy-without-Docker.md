@@ -3,7 +3,7 @@ If you don't want to use docker, then install wireguard, nodejs and npm from you
 echo net.ipv4.ip_forward=1 >> /etc/sysctl.conf
 echo net.ipv4.conf.all.src_valid_mark=1 >> /etc/sysctl.conf
 sysctl -p
-git clone https://github.com/WeeJeWel/wg-easy
+git clone https://github.com/wg-easy/wg-easy
 cd wg-easy
 mv src /app
 cd /app
@@ -23,7 +23,7 @@ systemctl start wg-easy.service
 
 To upgrade do the following
 <pre>
-git clone https://github.com/WeeJeWel/wg-easy # do this if you dont have the repository cloned aldready
+git clone https://github.com/wg-easy/wg-easy # do this if you dont have the repository cloned aldready
 cd wg-easy
 git pull
 rm -rf /app /node_modules
