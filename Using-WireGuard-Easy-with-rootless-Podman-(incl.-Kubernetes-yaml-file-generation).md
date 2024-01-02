@@ -1,3 +1,4 @@
+_Written by:_ **@robbie-hunt**
 #### Raspberry Pi 4B 4GB, DietPi v8.0.2 (thin version of Raspbian OS)
 
 I wanted to use this project via podman instead of Docker. When using [podman-compose](https://github.com/containers/podman-compose) (in [this issue](https://github.com/WeeJeWel/wg-easy/issues/27)) I couldn't get it to work properly. My steps for how I implemented this into Podman as well as how I created a Kubernetes yaml file (for using with podman kube play, like docker-compose) are mostly taken from [this article](https://www.redhat.com/sysadmin/compose-podman-pods) (which is a good place to start for converting docker-compose files to kubernetes/podman files).
