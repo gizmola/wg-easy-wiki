@@ -18,7 +18,6 @@ wget -O /etc/systemd/system/wg-easy.service https://envs.sh/QQK.txt  <--broke??
 nano /etc/systemd/system/wg-easy.service # Replace everything that is marked as 'REPLACEME' and tweak it to your liking
 systemctl daemon-reload
 systemctl enable --now wg-easy.service
-systemctl start wg-easy.service
 </pre>
 
 To upgrade do the following
