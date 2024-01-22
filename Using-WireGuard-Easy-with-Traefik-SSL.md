@@ -42,7 +42,7 @@ services:
       # - WG_POST_DOWN=echo "Post Down" > /etc/wireguard/post-down.txt
 
     container_name: wg-easy
-    image: weejewel/wg-easy
+    image: ghcr.io/wg-easy/wg-easy
     networks:
       - traefik_network
     volumes:
