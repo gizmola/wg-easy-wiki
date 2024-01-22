@@ -16,7 +16,7 @@ podman run -d \
   --sysctl="net.ipv4.conf.all.src_valid_mark=1" \
   --sysctl="net.ipv4.ip_forward=1" \
   --restart unless-stopped \
-  wg-easy/wg-easy
+  ghcr.io/wg-easy/wg-easy
 ```
 
 # Run with podman-compose
@@ -43,7 +43,7 @@ services:
       # - WG_PRE_DOWN=echo "Pre Down" > /etc/wireguard/pre-down.txt
       # - WG_POST_DOWN=echo "Post Down" > /etc/wireguard/post-down.txt
       
-    image: wg-easy/wg-easy
+    image: ghcr.io/wg-easy/wg-easy
     container_name: wg-easy
     volumes:
       - .:/etc/wireguard
