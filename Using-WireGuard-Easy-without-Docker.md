@@ -1,4 +1,4 @@
-If you don't want to use docker, then install wireguard, nodejs and npm from your package manager and then, run the following.
+If you don't want to use docker, then install wireguard, nodejs 18 or above and npm from your package manager and then, run the following.
 <pre>
 echo net.ipv4.ip_forward=1 >> /etc/sysctl.conf
 echo net.ipv4.conf.all.src_valid_mark=1 >> /etc/sysctl.conf
