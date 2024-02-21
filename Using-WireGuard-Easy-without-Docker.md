@@ -5,6 +5,7 @@ echo net.ipv4.conf.all.src_valid_mark=1 >> /etc/sysctl.conf
 sysctl -p
 git clone https://github.com/wg-easy/wg-easy
 cd wg-easy
+git checkout production
 mv src /app
 cd /app
 npm ci --omit=dev
@@ -22,6 +23,7 @@ To upgrade do the following
 <pre>
 git clone https://github.com/wg-easy/wg-easy # do this if you dont have the repository cloned aldready
 cd wg-easy
+git checkout production
 git pull
 rm -rf /app /node_modules
 mv src /app
