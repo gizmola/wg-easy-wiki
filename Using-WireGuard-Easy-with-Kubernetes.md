@@ -1,7 +1,7 @@
 Example deployment on a self hosted K3s cluster with local storage.
 
 Some caveats and notes:
-- K3s provides an `eth0` device for every pod, you'll have to check your distribution to find out what device is available within the pod. I'm 99% sure it's eth0 everywhere, but for example `aws-vpc-cni`, containerd, or dockerd may call it something else. If you see inbound traffic but no outbound traffic, and can only reach the wg-easy http interface on `10.8.0.1` then this will most likely be your problem and you'll need to specify the `WG_DEVICE` environment variable.
+- K3s provides an `eth0` device for every pod, you'll have to check your distribution to find out what device is available within the pod. I'm 99% sure it's eth0 everywhere, but for example `aws-vpc-cni`, containerd, or dockerd may call it something else. If you see inbound traffic but no outbound traffic, and can only reach the wg-easy http interface on `http://10.8.0.1:51821` then this will most likely be your problem and you'll need to specify the `WG_DEVICE` environment variable.
 - This example is using local storage on a single node in a self-hsoted k3s cluster. It is assumed if you're reading this you know how to create persistent volumes. If not then it's best to start with the [Kuberenetes documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/). There are many other options for storage here which are outside the scope of this doc.
 - It's assumed you can already `kubectl apply` or pass this in to argocd/flux or whatever CI/CD system you want.
 - There is no UI password protection here. It's assumed you can add your own Secret and adjust the UI accordingly if needed.
