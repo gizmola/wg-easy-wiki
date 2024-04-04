@@ -13,7 +13,7 @@ cp node_modules ..
 ufw allow 51821/tcp # (webui) Only for users of the UFW firewall
 ufw allow 51820/udp # (wireguard listening port) Only for users of the UFW firewall
 cd -
-curl -Lo /etc/systemd/system/wg-easy.service https://raw.githubusercontent.com/wg-easy/wg-easy/master/wg-easy.service
+curl -Lo /etc/systemd/system/wg-easy.service https://raw.githubusercontent.com/wg-easy/wg-easy/production/wg-easy.service
 nano /etc/systemd/system/wg-easy.service # Replace everything that is marked as 'REPLACEME' and tweak it to your liking
 systemctl daemon-reload
 systemctl enable --now wg-easy.service
