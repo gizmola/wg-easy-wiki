@@ -63,3 +63,9 @@ networks:
 ```
 
 Save this file, edit the variables marked with `⚠️` and run `docker-compose up -d` in the same directory. That's it!
+
+Editing Hostname in Query Logs of Pi Hole:
+
+[How do I change the name of the client from wg-easy docker-compose with Pi-hole?](https://discourse.pi-hole.net/t/how-do-i-change-the-name-of-the-client-from-wg-easy-docker-compose-with-pi-hole/69446/2)
+
+[#971](https://github.com/wg-easy/wg-easy/issues/971)
