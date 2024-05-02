@@ -9,7 +9,7 @@ git checkout production
 mv src /app
 cd /app
 npm ci --omit=dev
-cp node_modules ..
+cp -r node_modules ..
 ufw allow 51821/tcp # (webui) Only for users of the UFW firewall
 ufw allow 51820/udp # (wireguard listening port) Only for users of the UFW firewall
 cd -
