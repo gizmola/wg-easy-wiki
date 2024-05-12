@@ -31,12 +31,12 @@ all:
 
 wireguard_addresses:
   hosts:
-    my-vm:
+    your-vm:
       ansible_host: 123.45.67.89
 ```
-Instead of 123.45.67.89, you need to specify the IP of your virtual machine.
+Instead of your-vm, specify the name of your virtual machine.
 
-Instead of my-vm, specify the name of your virtual machine.
+Instead of 123.45.67.89, you need to specify the IP of your virtual machine.
 
 In the inventories/prod/group_vars/all.yml file, set the password for the Wireguard web interface:
 ```bash
@@ -51,9 +51,14 @@ The playbook also provides backup functionality.
 ***
 
 # Entry Point
-At the end of the Ansible run, a message like the following will be displayed:
-UI address: http://123.45.67.890:51821
-This will be the web interface.
+At the end of the Ansible run, a message like the following will be displayed your UI address:
+
+```
+TASK [wireguard : Output UI address] *******************************************************************************
+ok: [your-vm] => {
+    "msg": "UI address: http://123.45.67.89:51821"
+}
+```
 
 ***
 
