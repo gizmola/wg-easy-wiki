@@ -27,7 +27,7 @@ services:
     environment:
       # ⚠️ Required:
       # Change this to your host's public address
-      WG_HOST: vpn.homelab.com
+      - WG_HOST=vpn.homelab.com
 
       # Optional:
       # - PASSWORD=
