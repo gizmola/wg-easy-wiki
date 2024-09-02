@@ -40,9 +40,10 @@ Instead of 123.45.67.89, you need to specify the IP of your virtual machine.
 
 In the inventories/prod/group_vars/all.yml file, set the password for the Wireguard web interface:
 ```bash
-wg_easy_password: "mypassword"
+wg_easy_password_hash
 ```
-Replace mypassword with your actual password.
+
+you need create a password hash [https://github.com/wg-easy/wg-easy/blob/master/How_to_generate_an_bcrypt_hash.md`](https://github.com/wg-easy/wg-easy/blob/master/How_to_generate_an_bcrypt_hash.md%60)
 
 Other variables are also available in the role that can be configured. 
 Details can be found [here](https://gitlab.com/CTPEJIKuH/wireguard-playbook/-/blob/main/roles/wireguard/README.md?ref_type=heads).
